@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Socket io test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="input-container">
+        <input type="text" class="message" />
+        <button id="button">Send Message</button>
+    </div>
+    <!-- <input type="text" class="message">
+    <button id="button">Send Message</button> -->
+    <h1></h1>
+    <script >
+       const socket=io('http://localhost:3000');
+        socket.on('connection')//establis connection first
+//we want to see the message so
+socket.on('message',(data)=>{
+  document.querySelector("h1").innerHTML=data;
+   
+})
+        let r=document.getElementById('button');
+        r.addEventListener("click",()=>{
+            let r=document.querySelector(".message");
+            let final=r.value;
+            
+            socket.emit('message',final);
+        }); 
+          
+    </script> 
+</body>
+</html>
+<!-- 
+Execution Summary:
+Server Initialization:
+
+server.js starts, listens for HTTP and WebSocket connections.
+Client Connects:
+
+Client requests socket.html.
+Socket.IO library establishes WebSocket connection.
+Message Flow:
+
+Client sends a "message" to the server via socket.emit.
+Server receives the message and broadcasts it to other clients via socket.broadcast.emit.
+Other Clients receive the message and update their UI.
+Event Order in Detail
+Server listen -> app.get -> io.on('connection').
+Client connects -> socket.emit('message').
+Server handles the event -> broadcasts with socket.broadcast.emit.
+Other clients receive and process the event with socket.on('message').
+Let me know if you'd like more clarification! -->
+
+
+
+
+
+
+
