@@ -11,7 +11,7 @@ const io=new Server(server);
 app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/socket.html');
+    res.sendFile(__dirname + '/index.html');
   });
 
 server.listen(3000,()=>{
