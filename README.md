@@ -25,7 +25,7 @@ A real-time chat application built using **Node.js**, **Express**, and **Socket.
 
 ## 📸 Screenshot
 
-![Chat App Screenshot](https://user-images.githubusercontent.com/your-image-url.png)
+<img width="950" alt="Image" src="https://github.com/user-attachments/assets/4c3c52b7-789d-4683-950a-0adc387efad6" />
 
 ---
 
