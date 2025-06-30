@@ -82,6 +82,24 @@ Root Directory: (leave blank if files are in root)
 
 Port: Render auto-detects 3000
 
+🧪 How to Use the Chat App (Locally or Online)
+To experience the real-time chat functionality:
+
+✅ Steps (Works for both localhost and live demo)
+Open two different browsers (e.g., Chrome and Firefox)
+or open two private/incognito windows in the same browser.
+
+Go to:
+
+http://localhost:3000 (for local testing)
+or
+
+https://socket-chat-9vkz.onrender.com (for online demo)
+
+Type a message in one window and send it.
+
+The message will instantly appear in the other window — real-time!
+
 🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
